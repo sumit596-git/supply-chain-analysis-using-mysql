@@ -31,16 +31,6 @@ FROM datacosupplychaindataset;
 SELECT COUNT(*) AS missing_order_ids
 FROM supply_chain_data
 WHERE order_id IS NULL;
-
--- Check missing Order Dates
-SELECT COUNT(*) AS missing_order_dates
-FROM supply_chain_data
-WHERE order_date IS NULL;
-
--- Check total records
-SELECT COUNT(*) AS total_records
-FROM supply_chain_data;
-
 -- change datetime from string to real datetime
 ALTER TABLE supply_chain_data
 ADD COLUMN order_date DATETIME;
@@ -54,6 +44,16 @@ SET SQL_SAFE_UPDATES=1;
 -- check data 
 SELECT * FROM supply_chain_data
 LIMIT 10;
+-- Check missing Order Dates
+SELECT COUNT(*) AS missing_order_dates
+FROM supply_chain_data
+WHERE order_date IS NULL;
+
+-- Check total records
+SELECT COUNT(*) AS total_records
+FROM supply_chain_data;
+
+
 
 -- =========================================
 -- 4. BASIC DATA ANALYSIS
