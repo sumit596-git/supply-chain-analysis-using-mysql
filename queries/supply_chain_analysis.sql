@@ -2,8 +2,8 @@
 -- 1. DATABASE CREATION
 -- =========================================
 
-CREATE DATABASE pharma_supply_chain;
-USE pharma_supply_chain;
+CREATE DATABASE supply_chain;
+USE supply_chain;
 
 -- =========================================
 -- 2. DATA PREPARATION
